@@ -356,13 +356,37 @@ ul {
   margin: 0;
 }
 
+/* About text as a bordered tile */
+#about .prose {
+  max-width: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.4rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.12s ease, border-color 0.2s ease;
+}
+#about .prose:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
 /* ---------- Experience timeline ---------- */
 .timeline-item {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.12s ease, border-color 0.2s ease;
 }
 .timeline-item:last-child {
-  border-bottom: none;
+  margin-bottom: 0;
+}
+.timeline-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
 }
 .timeline-item__head {
   display: flex;
@@ -557,6 +581,14 @@ ul {
     border-top: none;
   }
   .card {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+  .timeline-item {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+  #about .prose {
     box-shadow: none;
     break-inside: avoid;
   }
