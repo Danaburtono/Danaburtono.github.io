@@ -13,10 +13,13 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <!-- Site-wide animated aurora background -->
+  <div class="site-aurora" aria-hidden="true"></div>
+
   <!-- Skip link for keyboard/accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -42,18 +45,13 @@
     <!-- HERO — replace the placeholders below with your details        -->
     <!-- ============================================================= -->
     <section id="top" class="hero container">
-      <div class="hero__bg" aria-hidden="true">
-        <span class="blob blob--1"></span>
-        <span class="blob blob--2"></span>
-        <span class="grid-overlay"></span>
-      </div>
+      <div class="hero__bg" aria-hidden="true"></div>
       <div class="hero__content reveal">
         <div class="avatar" aria-hidden="true">DB</div>
-        <p class="hero__eyebrow">Software Developer · GIS &amp; Automation</p>
         <h1 class="hero__name">Dana Burton</h1>
         <p class="hero__tagline">
           Collaborative software developer building reliable, maintainable solutions —
-          from full-stack reporting apps to AI-driven QA/QC tools and geospatial automation.
+          from full-stack reporting apps to AI-driven QA/QC tools and automation.
         </p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="#contact">Get in touch</a>
@@ -62,6 +60,9 @@
         <ul class="hero__links" aria-label="Profiles">
           <li><a href="mailto:danaburton95@gmail.com">danaburton95@gmail.com</a></li>
           <li><a href="tel:+15305743766">530-574-3766</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/dana-burton-942767179" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </li>
           <li><span>Granada Hills, CA</span></li>
         </ul>
       </div>
@@ -73,7 +74,7 @@
     <section class="stats container" aria-label="At a glance">
       <a class="stat reveal" href="#experience">
         <span class="stat__num" data-count="5" data-suffix="+">5+</span>
-        <span class="stat__label">Years in GIS &amp; software</span>
+        <span class="stat__label">Years of software development experience</span>
       </a>
       <a class="stat reveal" href="#skills">
         <span class="stat__num" data-count="10" data-suffix="+">10+</span>
@@ -95,11 +96,26 @@
     <section id="about" class="section container">
       <h2 class="section__title">About</h2>
       <p class="prose">
-        Collaborative software developer known for approachability, dependability, and
-        meticulous attention to detail. I build reliable, maintainable solutions that
-        support both technical teams and end users through thoughtful design, clear coding
-        practices, and thorough testing. Passionate about automation, process improvement,
-        and developing practical solutions to everyday challenges.
+        I started my career as a Geospatial Technician while working steadily toward a career in
+        software development. Over the last six years I've grown into a backend software engineer —
+        building API workflows, standing up Azure cloud infrastructure and relational databases
+        (RDBMS), and shipping solutions across JavaScript, Python, and HTML/CSS, all version-controlled
+        in Git &amp; GitHub. I work comfortably within Agile teams and support iterative development end
+        to end: requirements gathering, testing, deployment, and continuous improvement.
+        <br /><br />
+        I bring an
+        expert level of technical skill to every project and approach each problem with a
+        solution-oriented mindset that improves efficiency and everyday workflows. I care just as much
+        about the people using what I build as the code itself — I'm approachable, dependable, and
+        genuinely enjoy turning a teammate's tedious manual task into something automated and reliable.
+        Clear communication, thoughtful code reviews, and mentoring others are the parts of the job I
+        find most rewarding.
+        <br /><br />
+        Outside of work, I'm endlessly curious. My path from environmental science
+        and GIS into software taught me to stay a lifelong learner, and I channel that same energy into
+        exploring new tools like AI agents and MCP, tinkering with side projects, and spending time
+        outdoors and with a good cup of coffee. That mix of grounded practicality and constant
+        curiosity is what I bring to a team every day.
       </p>
     </section>
 
@@ -307,6 +323,7 @@
           <ul class="chips">
             <li>JavaScript / TypeScript</li>
             <li>Python</li>
+            <li>React</li>
             <li>SQL</li>
             <li>HTML / CSS</li>
           </ul>
@@ -354,6 +371,19 @@
           </ul>
         </div>
         <div class="skills__group">
+          <h3 class="skills__label">Data Science &amp; Analytics</h3>
+          <ul class="chips">
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>scikit-learn</li>
+            <li>Jupyter</li>
+            <li>Data wrangling</li>
+            <li>Statistical analysis</li>
+            <li>Machine learning</li>
+            <li>Data visualization</li>
+          </ul>
+        </div>
+        <div class="skills__group">
           <h3 class="skills__label">Workflow</h3>
           <ul class="chips">
             <li>Agile / Scrum</li>
@@ -377,6 +407,10 @@
           <span class="timeline-item__meta">University of California, Davis · Minor in GIS</span>
           <span class="timeline-item__date">Dec 2019</span>
         </div>
+        <ul class="timeline-item__points">
+          <li>Studied environmental systems, ecology, land management, and the scientific foundations used to evaluate natural resources and environmental impacts.</li>
+          <li>Built GIS skills through spatial analysis, cartography, map design, and working with geospatial datasets to support environmental decision-making.</li>
+        </ul>
       </article>
 
       <article class="timeline-item">
@@ -385,6 +419,12 @@
           <span class="timeline-item__meta">University of California, Berkeley</span>
           <span class="timeline-item__date">Nov 2022</span>
         </div>
+        <ul class="timeline-item__points">
+          <li>Applied data science coursework covering Python, statistical analysis, data wrangling, and machine learning fundamentals.</li>
+          <li>Built end-to-end data pipelines to clean, transform, and analyze real-world datasets with Pandas and NumPy.</li>
+          <li>Developed and evaluated supervised and unsupervised machine learning models using scikit-learn.</li>
+          <li>Created data visualizations and dashboards to communicate insights and support data-driven decisions.</li>
+        </ul>
       </article>
 
       <article class="timeline-item">
@@ -419,9 +459,6 @@
     <!-- ============================================================= -->
     <section id="contact" class="section container">
       <h2 class="section__title">Contact</h2>
-      <p class="prose">
-        Interested in working together? Reach out and I'll get back to you.
-      </p>
       <p class="contact__line">
         <a class="btn btn--primary" href="mailto:danaburton95@gmail.com">danaburton95@gmail.com</a>
         <a class="btn btn--ghost" href="tel:+15305743766">530-574-3766</a>
